@@ -33,7 +33,7 @@ def create_event():
     new_id=max((e.id for e in events),default=0)+1
     new_event=Event(id=new_id,title=data['title'])
     events.append(new_event)
-    return jsonify(new_event.to_dict())
+    return jsonify(new_event.to_dict()),201
     # TODO: Task 2 - Design and Develop the Code
 
     # TODO: Task 3 - Implement the Loop and Process Each Element
